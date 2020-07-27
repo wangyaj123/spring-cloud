@@ -1,18 +1,18 @@
-#ÉèÖÃeurekaµÄ¶Ë¿ÚºÅ
+#è®¾ç½®eurekaçš„ç«¯å£å·
 server:
   port: 8761
-#ÉèÖÃeurekaµÄÖ÷»úµØÖ·
+# æœåŠ¡æ¨¡å—åç§°
+spring:
+  application:
+    name: eureka-server
+#è®¾ç½®eurekaçš„ä¸»æœºåœ°å€
 eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false   #ÊÇ·ñ½«×Ô¼º×¢²áµ½eureka server,Ä¬ÈÏÎªtrue£¬µ±Ç°Ó¦ÓÃ¾ÍÊÇeureka server ËùÒÔÉèÖÃÎªfalse
-    fetch-registry: false         # ÊÇ·ñ´Óeureka sever »ñÈ¡×¢²áĞÅÏ¢£¬ Ä¬ÈÏÎªtrueÒòÎªÕâÊÇÒ»¸öµ¥µãµÄEureka Server£¬²»ĞèÒªÍ¬²½ÆäËûµÄEureka Server½ÚµãµÄÊı¾İ£¬¹Ê¶øÉèÖÃÎªfalse
+    register-with-eureka: false   #æ˜¯å¦å°†è‡ªå·±æ³¨å†Œåˆ°eureka server,é»˜è®¤ä¸ºtrueï¼Œå½“å‰åº”ç”¨å°±æ˜¯eureka server æ‰€ä»¥è®¾ç½®ä¸ºfalse
+    fetch-registry: false          # æ˜¯å¦ä»eureka sever è·å–æ³¨å†Œä¿¡æ¯ï¼Œ é»˜è®¤ä¸ºtrueå› ä¸ºè¿™æ˜¯ä¸€ä¸ªå•ç‚¹çš„Eureka Serverï¼Œä¸éœ€è¦åŒæ­¥å…¶ä»–çš„Eureka ServerèŠ‚ç‚¹çš„æ•°æ®ï¼Œæ•…è€Œè®¾ç½®ä¸ºfalse
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    enable-self-preservation: false     #¹Ø±Õ×ÔÎÒ±£»¤
-# ·şÎñÄ£¿éÃû³Æ
-spring:
-  application:
-    name: eureka-server
+    enable-self-preservation: false   #å…³é—­è‡ªæˆ‘ä¿æŠ¤
